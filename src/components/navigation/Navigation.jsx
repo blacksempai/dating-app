@@ -1,14 +1,15 @@
 import './Navigation.css'
+import { NavLink } from 'react-router-dom'
 
 const Navigation = () => {
     return (
         <nav>
             <ul>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Dialogs</a></li>
-                <li><a href="#">Dating</a></li>
-                <li><a href="#">Likes</a></li>
-                <li><a href="#">Settings</a></li>
+                <li className='item'><NavLink to="/profile">Profile</NavLink></li>
+                <li className='item'><NavLink to="/dialogs">Dialogs</NavLink></li>
+                <li className='item'><NavLink to="/datings">Dating</NavLink></li>
+                <li className='item'><NavLink to="/likes">Likes</NavLink></li>
+                <li className='item'><NavLink to="/settings">Settings</NavLink></li>
             </ul>
         </nav>
     )
