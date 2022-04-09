@@ -3,14 +3,23 @@ import logo from '../../../logo.svg'
 
 const ProfileInfo = () => {
     return (
-        <div>
+        <div className='ProfileInfo'>
             <img width="200" src={logo} alt="" />
-            <p>
-                Date of birth: 4 April <br />
-                City: Reshetylivka <br />
-                Education: KNUTD CS Master <br />
-                Web site: undefined <br />
-            </p>
+            <div className="details">
+                <p className='item'>
+                    Date of birth: 4 April
+                </p>
+                <p className='item'>
+                    City: Reshetylivka
+                </p>
+                <p className='item'>
+                    Education: KNUTD CS Master
+                </p>
+                <p className='item'>
+                    Web site: undefined
+                </p>
+            </div>
+
         </div>
     );
 }

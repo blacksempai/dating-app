@@ -1,0 +1,7 @@
+.ProfileInfo {
+    display: flex;
+}
+
+.item {
+    margin: 8px;
+}
