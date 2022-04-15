@@ -4,7 +4,7 @@ import logo from '../../../logo.svg'
 const ProfileInfo = () => {
     return (
         <div className={classes.ProfileInfo}>
-            <img width="200" src={logo} alt="" />
+            <img width="200" src={logo} alt="ava" className={classes.ava} />
             <div className="details">
                 <h3 className={classes.item}>Andriy Moskalenko</h3>
 

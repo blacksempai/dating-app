@@ -1,10 +1,10 @@
-import './Profile.css'
+import classes from './Profile.module.css'
 import ProfileInfo from './profile-info/ProfileInfo';
 import Posts from './posts/Posts';
 
 const Profile = () => {
     return (
-        <div className='profile'>
+        <div className={classes.profile}>
             <h1>Profile</h1>
             <ProfileInfo />
             <Posts />

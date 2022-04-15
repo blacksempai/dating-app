@@ -1,7 +1,16 @@
 .ProfileInfo {
     display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 .item {
-    margin: 8px;
+    margin: 8px 0;
+}
+
+.ava {
+    background-color: #ffffff;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
 }
