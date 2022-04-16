@@ -5,7 +5,7 @@ import Dialogs from './components/dialogs/Dialogs'
 import Navigation from './components/navigation/Navigation'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-function App() {
+function App(props) {
   return (
     <BrowserRouter>
       <div className="container">
@@ -15,7 +15,7 @@ function App() {
         </div>
         <div className="right_col">
           <Routes>
-            <Route path='/profile' element={<Profile />}/>
+            <Route path='/profile' element={<Profile state={props.state} />}/>
             <Route path='/dialogs' element={<Dialogs />} />
           </Routes>
         </div>

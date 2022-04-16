@@ -1,0 +1,10 @@
+.dialogs {
+    display: flex;
+    padding: 2rem;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.left {
+    flex-basis: 15rem;
+}

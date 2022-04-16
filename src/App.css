@@ -19,3 +19,8 @@
   margin: 0 auto;
   display: block;
 }
+
+.active {
+  color: blue!important;
+  font-weight: bold;
+}
