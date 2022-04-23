@@ -4,12 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import state from './state';
-import { addPost } from './state'
+import { addPost, subscribe } from './state'
 
-ReactDOM.render(
-    <App state={state} addPost={addPost}/>,
-  document.getElementById('root')
-);
+const renderEntireTree = () => {
+    ReactDOM.render(
+      <App state={state} addPost={addPost}/>,
+    document.getElementById('root')
+  );
+};
+renderEntireTree();
+subscribe(renderEntireTree)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
