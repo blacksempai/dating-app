@@ -8,4 +8,11 @@ const state = {
     messages: []
 }
 
+export const addPost = (newText) => {
+    let post = {
+        text: newText
+    };
+    state.posts.push(post); 
+}
+
 export default state;

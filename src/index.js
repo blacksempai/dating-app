@@ -4,9 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import state from './state';
+import { addPost } from './state'
 
 ReactDOM.render(
-    <App state={state}/>,
+    <App state={state} addPost={addPost}/>,
   document.getElementById('root')
 );
 
