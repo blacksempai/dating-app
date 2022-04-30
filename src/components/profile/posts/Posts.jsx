@@ -8,17 +8,21 @@ const Posts = (props) => {
 
     const addPost = (e) => {
         e.preventDefault();
-        props.addPost(textRef.current.value)
+        props.addPost();
+    }
+
+    const newText = () => {
+        props.changeNewPostText(textRef.current.value);
     }
 
     let posts = props.posts.map((p)=>{
-        return <Post text={p.text}/>
+        return <Post text={p.text} like={p.like} id={p.id}/>
     })
     return (
         <div>
            <h1>Posts</h1> 
            <form onSubmit={addPost}>
-                <textarea className={classes.new_post} ref={textRef}></textarea>
+                <textarea className={classes.new_post} ref={textRef} onChange={newText} value={props.newPostText} />
                 <input className={classes.submit} type="submit" value="Send" />
            </form>
            <div className={classes.posts}>

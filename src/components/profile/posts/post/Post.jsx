@@ -6,6 +6,8 @@ const Post = (props) => {
         <div className={classes.post}>
             <img src={logo} alt="ava" className={classes.ava}/>
             <p className={classes.text}> {props.text} </p>
+            <span>{props.like}</span>
+            <button>👍</button>
         </div>
     );
 }
