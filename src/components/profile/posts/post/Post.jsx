@@ -4,7 +4,11 @@ import logo from './../../../../logo.png'
 const Post = (props) => {
 
     let addLike = () => {
-        props.addLike(props.id);
+        let action = {
+            type: 'ADD_LIKE',
+            id: props.id
+        }
+        props.dispatch(action);
     }
 
     return (

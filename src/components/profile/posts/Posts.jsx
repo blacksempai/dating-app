@@ -3,20 +3,23 @@ import Post from './post/Post'
 import React from 'react'
 
 const Posts = (props) => {
-
     let textRef = React.createRef(); 
-
     const addPost = (e) => {
         e.preventDefault();
-        props.addPost();
+        let action = { type: 'ADD_POST' }
+        props.dispatch(action);
     }
 
     const newText = () => {
-        props.changeNewPostText(textRef.current.value);
+        let action = {
+            type: 'NEW_POST_TEXT',
+            text: textRef.current.value
+        }
+        props.dispatch(action);
     }
 
     let posts = props.posts.map((p)=>{
-        return <Post text={p.text} like={p.like} id={p.id} addLike={props.addLike}/>
+        return <Post text={p.text} like={p.like} id={p.id} dispatch={props.dispatch}/>
     })
     return (
         <div>
