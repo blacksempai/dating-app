@@ -10,3 +10,10 @@
     background-color: #fff;
     border-radius: 50%;
 }
+
+.like_btn {
+    border: none;
+    background: none;
+    font-size: 2rem;
+    text-shadow: 1px 1px 0;
+}

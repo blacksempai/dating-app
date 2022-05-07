@@ -4,11 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import state from './state';
-import { addPost, subscribe, changeNewPostText } from './state'
+import { addPost, subscribe, changeNewPostText, addLike } from './state'
 
 const renderEntireTree = () => {
     ReactDOM.render(
-      <App state={state} addPost={addPost} changeNewPostText={changeNewPostText} />,
+      <App state={state} addPost={addPost} changeNewPostText={changeNewPostText} addLike={addLike}/>,
     document.getElementById('root')
   );
 };

@@ -19,7 +19,9 @@ const state = {
 
 export const addPost = () => {
     let post = {
-        text: state.newPostText
+        id: state.posts.length,
+        text: state.newPostText,
+        like: 0
     };
     state.posts.push(post);
     state.newPostText = "";
@@ -33,7 +35,8 @@ export const changeNewPostText = (text) => {
 
 
 export const addLike = (id) => {
-    state.posts[id].like++
+    state.posts[id].like++;
+    notifySubscriber();
 } 
 
 export default state;

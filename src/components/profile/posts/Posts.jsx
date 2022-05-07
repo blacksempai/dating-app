@@ -16,7 +16,7 @@ const Posts = (props) => {
     }
 
     let posts = props.posts.map((p)=>{
-        return <Post text={p.text} like={p.like} id={p.id}/>
+        return <Post text={p.text} like={p.like} id={p.id} addLike={props.addLike}/>
     })
     return (
         <div>
