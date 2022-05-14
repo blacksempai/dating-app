@@ -1,21 +1,16 @@
 import classes from './Dialogs.module.css'
+import DialogList from './dialog-list/DialogList';
+import Messages from './messages/Messages';
 
-const Dialogs = () => {
+
+const Dialogs = (props) => {
     return (
         <div className={classes.dialogs}>
             <div className={classes.left}>
-                Dialog1<br/>
-                Dialog2<br/>
-                Dialog3<br/>
-                Dialog4<br/>
-                Dialog5<br/>
+                <DialogList dialogs={props.state.dialogs}  dispatch={props.dispatch}/>
             </div>
             <div className={classes.right}>
-                Hello!<br/>
-                Hello, I am cat!!<br/>
-                Message<br/>
-                Message<br/>
-                Message<br/>
+                <Messages messages={props.state.messages} newText={props.state.newText} dispatch={props.dispatch}/>
             </div>
         </div>
     )
