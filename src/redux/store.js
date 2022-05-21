@@ -40,8 +40,8 @@ const store = {
     },
 
     dispatch(action) {
-        this._state.postsState = postsReducer(action, this._state.postsState);
-        this._state.dialogsState = dialogsReducer(action,this._state.dialogsState);
+        this._state.postsState = postsReducer(this._state.postsState, action);
+        this._state.dialogsState = dialogsReducer(this._state.dialogsState, action);
         this._notifySubscriber();
     } 
 
