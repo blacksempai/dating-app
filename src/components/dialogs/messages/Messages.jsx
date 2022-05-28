@@ -1,18 +1,14 @@
-import { newTextActionCreator, addMsgActionCreator } from "../../../redux/dialogsReducer";
-
 
 const Messages = (props) => {
     let msgs = props.messages.map(m => <p> {m.text} <span>{m.author}</span></p>)
 
     let changeNewText = (e) => {
         let text = e.target.value;
-        let action = newTextActionCreator(text);
-        props.dispatch(action);
+        props.changeNewText(text)
     } 
 
     let addMsg = () => {
-        let action = addMsgActionCreator();
-        props.dispatch(action);
+        props.addMsg();
     }
 
     return (
