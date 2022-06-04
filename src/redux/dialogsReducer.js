@@ -18,13 +18,17 @@ let initialState = {
 const dialogsReducer = (state = initialState, action) => {
     switch(action.type) {
         case NEW_TEXT:
-            state.newText = action.text
-            break;
+            return {
+                ...state,
+                newText: action.text
+            }
 
         case ADD_MSG:
             let msg = {id: state.messages.length , text: state.newText, author: 'Sasha'}
-            state.messages.push(msg)    
-            break;
+            return {
+                ...state,
+                messages: [...state.messages, msg]
+            }
 
         default: break;
     }

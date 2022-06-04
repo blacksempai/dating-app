@@ -6,7 +6,7 @@ const Posts = (props) => {
     let textRef = React.createRef(); 
     const addPost = (e) => {
         e.preventDefault();
-        posts.addPost();
+        props.addPost();
     }
 
     const newText = () => {
