@@ -1,0 +1,4 @@
+{
+    "port": "5000",
+    "mongoURL": "mongodb+srv://root:root@clustercool.c733csk.mongodb.net/?retryWrites=true&w=majority"
+}
