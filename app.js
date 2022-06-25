@@ -5,6 +5,9 @@ const config = require('config');
 const PORT = config.get('port') || 5000;
 const app = express();
 
+const cors = require('cors');
+app.use(cors({origin: '*'}));
+
 async function start() {
     try {
         await mongoose.connect(config.get('mongoURL'));
