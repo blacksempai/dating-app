@@ -5,15 +5,19 @@ import axios from "axios";
 
 class DatingContainer extends Component {
 
+    state = {
+        users: []
+    }
+
     componentDidMount = () => {
         axios.get('http://localhost:5000/users')
         .then((data)=> {
-            console.log(data);
+            this.setState({users: data.data});
         })
     }
 
     render() {
-        return <Dating users={[]}/>
+        return <Dating users={this.state.users}/>
     }
 
 }
